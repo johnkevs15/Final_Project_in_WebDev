@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
                     <span class="title">Personal Information</span>
                     <div class="field">
                         <div class="input-field">
-                            <input type="text" placeholder="First Name" style="width: 350px; height: 30px;">
+                            <input type="text" placeholder="First Name" style="width: 350px; height: 30px;" required>
                             <label >First Name</label>
                         </div>
                         <div class="input-field">
@@ -41,7 +42,7 @@
                     <div class="field">
                         <div class="input-field">
                             <input type="text" placeholder="Contact" style="width: 350px; height: 30px;">
-                            <label >Contact</label>
+                            <label >Contact </i></label>
                         </div>
                         <div class="input-field">
                             <input type="text" placeholder="Email" style="width: 350px; height: 30px;">
@@ -51,9 +52,11 @@
                        
                     </div>
                    <button class="btnnext">
-                    <span class="btntext">next
-
+                    <span class="btntext"  style="text-transform: uppercase;">next 
+                        <i class='fa fa-angle-right'></i>
                     </span>
+                   
+                   
                    </button>
                     </div>                  
                 </div>
@@ -95,36 +98,39 @@
                         
                         </div>
                         <div class="buttons">
-                            <button class="backbtn">
+                            <button class="backbtn1">
                                 <span class="backtext">Back</span>
-                                <iconify-icon icon="fluent:arrow-next-12-filled"></iconify-icon>
+                              
                             </button>
-                            <button class="nextbtn">
+                            <button class="nextbtn1">
                                 <span class="btntext">Next</span>
-                                <iconify-icon icon="fluent:arrow-next-12-filled"></iconify-icon>
+                             
                             </button>
                         </div>
                     </div>
                </div>
-               <div class="form third">
+               <div class="form third" style="background-color: white ;width: 100%;height: 100%;">
                     <div class="Professional Skills">
                         <span class="title">Professional Skills</span> 
-                        <div class="skills">
+                        <div class="skills" >
                             <div class="input">
-                                <input type="text">
+                                <input type="text" style="width: 350px; height: 30px;">
                                 <label for="#">Your Skills</label>
                                 <button>Add</button>
                             </div>
                         </div>
                     
                         <div class="buttons">
-                            <button class="backbtn">
+                            <button class="backbtn2">
+                                <i class='fa fa-angle-left'></i>
                                 <span class="backtext">Back</span>
-                                <iconify-icon icon="fluent:arrow-next-12-filled"></iconify-icon>
+                               
                             </button>
-                            <button class="nextbtn">
-                                <span class="btntext">Next</span>
-                                <iconify-icon icon="fluent:arrow-next-12-filled"></iconify-icon>
+                            <button class="nextbtn2">
+                                <span class="btntext">Next
+                                    <i class='fa fa-angle-right'></i>
+                                </span>
+                                
                             </button>
                         </div>
                     </div>
@@ -168,28 +174,31 @@
                         
                         </div>
                         <div class="buttons">
-                            <button class="backbtn">
+                            <button class="backbtn3">
+                                <i class='fa fa-angle-left'></i>
+                                
                                 <span class="backtext">Back</span>
-                                <iconify-icon icon="fluent:arrow-next-12-filled"></iconify-icon>
+                              
                             </button>
-                            <button class="nextbtn">
+                            <button class="nextbtn3">
                                 <span class="btntext">Next</span>
-                                <iconify-icon icon="fluent:arrow-next-12-filled"></iconify-icon>
+                                <i class='fa fa-angle-right'></i>
                             </button>
                         </div>
                     </div>
                </div>
-               <div class="form fifth">
-                    <div class="Professional Summary">
+               <div class="form fifth"  style="background-color: red;width: 100%;height: 100%;">
+                    <div class="Professional Summary" >
                         <span class="title">Professional Summary</span>
                         <div class="buttons">
-                            <button class="backbtn">
+                            <button class="backbtn4">
+                                <i class='fa fa-angle-left'></i>
                                 <span class="backtext">Back</span>
-                                <iconify-icon icon="fluent:arrow-next-12-filled"></iconify-icon>
+
                             </button>
-                            <button class="nextbtn">
+                            <button class="nextbtn4">
                                 <span class="btntext">Next</span>
-                                <iconify-icon icon="fluent:arrow-next-12-filled"></iconify-icon>
+                                <i class='fa fa-angle-right'></i>
                             </button>
                         </div>
                     </div>
@@ -199,7 +208,9 @@
      
     </div>
    
+<script src = "script.js">
     
+</script>
 
 </body>
 </html>

@@ -35,21 +35,19 @@ body{
     
 }
 
- .second,  .third,  .fourth,  .fifth{
-    /* display: none; */
-    opacity: 0;
-    pointer-events: none;
+ .second, .third,  .fourth,  .fifth{
+
+    /* opacity: 0;
+    pointer-events: none; */
+    display: none;
 }
-.container form .form .first{
-    /* display: none; */
-    opacity: 1;
-    pointer-events: none;
-}
+
 .container form .title{
     font-size: 30px;
     font-weight: 500;
      
 }
+
 .field{
     display: flex;
     align-items: center;
@@ -102,6 +100,7 @@ button{
     background-color: green;
     
 }
+
 button:hover{
     background-color: aqua;
    
@@ -110,6 +109,9 @@ form .buttons {
 display: flex;
 align-items: center;
 }
+/* button .btnnext i{
+   
+} */
 form .buttons button{
    margin-right: 20px;
    
