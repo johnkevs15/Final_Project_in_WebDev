@@ -1,0 +1,5 @@
+- https://github.com/jglovier/resume-template
+- https://github.com/StartBootstrap/startbootstrap-resume
+- https://github.com/hacksalot/HackMyResume
+- https://github.com/jpedroribeiro/html5-curriculum-vitae-template
+- https://github.com/Tombarr/html-resume-template
