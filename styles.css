@@ -18,7 +18,7 @@ body{
     background-color: rgba(255, 255, 255, 0.807);
 }
 .page{
-    max-width: 1300px;
+    max-width: 1300px; 
     margin: 0 auto; 
 }
 
@@ -141,11 +141,12 @@ main{
     font-size: 18px;
 }
 .content{
+    /* background: #C1C1C1; */
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: 80px;
     grid-column-gap: 50px;
-    max-width: 1000px;
+    max-width: auto;
     margin: 80px auto 100px auto;
 }
 .content .feature{
@@ -160,16 +161,17 @@ main{
     grid-column: 1;
     width: 200px;
     height: 200px;
+    margin-right:-50px;
 }
 
-.feature .icon i{
+/* .feature .icon i{
     display: inline-block;
     font-size: 38px;
     padding: 20px;
     background-color: #f8f8f8;
     border-radius: 50%;
     border:  thin solid #d6d6d6;
-}
+} */
 .feature .title{
     font-size: 18px;
     color: #333;
@@ -178,14 +180,16 @@ main{
     margin-top: 10px;
     font-size: 15px;
     line-height: 20px;
+    margin-right:40px;
+    text-align: justify;
 }
 
 
 /* SECTION 2 -------------------------------------  */
 .block-2{
     max-width: 1300px;
-    margin: 150px auto 100px auto;
-    background-color: #84577C;
+    /* margin: 150px auto 100px auto; */
+    background-color: #EB7C59;
     color: white;
     display: grid;
     grid-template-columns: 1fr;
@@ -216,7 +220,7 @@ main{
 
 
 /* SLIDER ----------------------------------------  */
-#my-slider{
+/* #my-slider{
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -268,7 +272,7 @@ main{
     margin-top: 10px;
     color: #e55f3e;
 }
-
+ */
 /* CONTACT FORM ----------------------------------  */
 
 .contact-form{
@@ -290,17 +294,21 @@ main{
     justify-content: center;
     align-items: center;
 }
+
 .contact-form .contact-btn i{
     color: white;
     font-size: 26px;
     padding-left: 10px;
 }
+
 .contact-form .contact-btn:hover{
     filter: brightness(1.2);
 }
+
 .contact-form .contact-btn:active{
     box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
+
 .contact-form .form-wrapper{
     display: grid;
     grid-template-columns: 1fr;
@@ -395,23 +403,26 @@ footer{
     max-width: 1300px;
     margin: 100px auto 0 auto;
     text-align: center;
-    background: url("site-images/footer-bg.png");
+    background: #42405A;
     padding: 50px 15px;
     color: #999;
 }
 footer .links{
     margin-bottom: 20px;
 }
+
 footer a{
     text-decoration: none;
     color: white;
     padding: 0 5px;
 }
+
 footer a:hover{
     color: #00ba9b;
     text-decoration: underline;
     transition: color 0.3s;
 }
+
 footer .terms a, 
 footer .terms span{
     padding: 0 5px;
@@ -431,4 +442,16 @@ footer .terms span{
     align-items:center;
     margin-right:100%-24rem;
     margin-left:100%-24rem;
+}
+
+.card{
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.env_icon{
+    width:25px;
+    height:25px;
+    margin-left:7px;
 }
