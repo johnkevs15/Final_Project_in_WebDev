@@ -36,10 +36,10 @@ session_start();
 				}
 			}
 			
-			echo "wrong username or password!";
+			echo "Wrong username or password!";
 		}else
 		{
-			echo "wrong username or password!";
+			echo "Wrong username or password!";
 		}
 	}
 
@@ -51,7 +51,7 @@ session_start();
 <head>
 	<title>Login</title>
 </head>
-<body>
+<body style="background-image:url('./loginbackground.png')">
 
 	<style type="text/css">
 	
@@ -69,21 +69,27 @@ session_start();
 		padding: 10px;
 		width: 100px;
 		color: white;
-		background-color: lightblue;
+		background-color: #2196F3;
 		border: none;
 	}
+	
 
 	#box{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 250px;
+		background: grey;
+		border-radius: 5px;
+		text-align: center;
+		padding: 30px 30px 5px 30px;
 
-		background-color: grey;
-		margin: auto;
-		width: 300px;
-		padding: 20px;
 	}
-
 	</style>
 
 	<div id="box">
+	
 		
 		<form method="post">
 			<div style="font-size: 20px;margin: 10px;color: white;">Login</div>

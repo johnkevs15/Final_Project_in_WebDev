@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <title>Signup</title>
 </head>
 
-<body>
+<body style="background-image:url('./loginbackground.png')">
 
     <style type="text/css">
         #text {
@@ -51,16 +51,21 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             padding: 10px;
             width: 100px;
             color: white;
-            background-color: lightblue;
+            background-color: #2196F3;
             border: none;
         }
 
         #box {
 
-            background-color: grey;
-            margin: auto;
-            width: 300px;
-            padding: 20px;
+        position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 250px;
+		background: grey;
+		border-radius: 5px;
+		text-align: center;
+		padding: 30px 30px 5px 30px;
         }
     </style>
 
