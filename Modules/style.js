@@ -13,9 +13,10 @@ $(document).ready(function(){
     // show Educational background
    $(".btnnext").click(function(){
     var fnameVal = $("#fname").val();
-    var contactVal = $("#contact").val(); 
+    // var contactVal = $("#contact").val(); 
     var emailVal = $("#email").val();
-    if(fnameVal.length!=0 && contactVal.length!=0 && emailVal!=0)  
+    var img = $('#addimage').val();
+    if(fnameVal.length!=0  && emailVal!=0 && parseInt($('input[name="not_robot"]').val()) && img !=" " )  
     {
        $(".first").hide(); 
      $(".second").show();
@@ -110,12 +111,12 @@ function addEducation(){
       var field = 
       `  <div class="field" style="grid-gap:11% ;margin-top:30px;">
       <div class="input-field">
-          <input type="text" placeholder="School name" name="schoolName${education_count}" style="width: 560px; height: 50px;" required id="school">
+          <input type="text" placeholder="e.g. USC" name="schoolName${education_count}" style="width: 560px; height: 50px;" required id="school">
           <label >School name</label>
       </div>
       <div class="input-field">
-          <input type="text" placeholder="school location" name="schoolLocation${education_count}" style="width:560px; height: 50px;" id="schooll" required>
-          <label >school location</label>
+          <input type="text" placeholder="e.g. Talamban Cebu City" name="schoolLocation${education_count}" style="width:560px; height: 50px;" id="schooll" required>
+          <label >school Address</label>
       </div>  
   
   

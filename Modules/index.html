@@ -28,13 +28,13 @@
                     <span >  Personal Information</span>
                     <div class="box" >
                         <div class="picture" >
-                            <label for="addimage"><i class="fa fa-plus" style="border: 1px solid; padding:50px; cursor: pointer; font-size: 50px; margin-top: 50px;"></i></label> 
+                            <label for="addimage"  aria-required="file"><i class="fa fa-plus" style="border: 1px solid; padding:50px; cursor: pointer; font-size: 50px; margin-top: 50px;"></i></label> 
                             <!-- <input type="file" name="" id="addimage" style="display: none; visibility:none;" onchange="imagePreview(this)" onchange="getImage(this.value)"> -->
                             
                             <input type="file" name="" id="addimage" style="display: none; visibility:none;" onchange="imagePreview(this)" required >
                             <br>
                             <br>
-                            <label for="addimage"><i class="fa fa-download" style="border: 1px solid; padding: 10px; background-color: white; " class="download" > Choose A Image</i></label>
+                            <label for="addimage" aria-required="file"><i class="fa fa-download" style="border: 1px solid; padding: 10px; background-color: white; " class="download" > Choose A Image</i></label>
                             <input type="file" name="" id="addimage" style="display: none; visibility:none;" onchange="imagePreview(this)"  required >
                             <br>
                             <img src="" id="out-put" width="300px"  style="position: absolute; margin-top: -240px; margin-left: -125px;"> 
@@ -53,12 +53,12 @@
                         <div class="userInput" >
                             <div class="field" style=" grid-gap: 37%;">
                                 <div class="input-field" >
-                                    <input type="text" placeholder="First Name" style="width: 260%; height: 50px;" id="fname" required >
+                                    <input type="text" placeholder="e.g. John" style="width: 260%; height: 50px;" id="fname" required >
                                   
                                     <label class="input-level" >First Name</label>
                                 </div>
                                 <div class="input-field">
-                                    <input type="text" placeholder="SurName" style="width: 260%; height: 50px;" id="lname" required>
+                                    <input type="text" placeholder="e.g. Doe" style="width: 260%; height: 50px;" id="lname" required>
                                     <label class="input-level" >SurName</label>
                                 </div>  
                             
@@ -66,22 +66,22 @@
                             </div>
                             <div class="field-1">
                                 <div class="input-field-1">
-                                    <input type="text" placeholder="JOB TITLE" style="width: 965px; height: 50px;" id="job" required>
+                                    <input type="text" placeholder="e.g. Sr. Web Developer" style="width: 965px; height: 50px;" id="job" required>
                                     <label class="input-level" >JOB TITLE</label>
                                 </div>
                                 <div class="input-field-1">
-                                    <input type="text" placeholder="ADDRESS" style="width:  965px; height: 50px;" id="address" required>
+                                    <input type="text" placeholder="e.g. Cebu City" style="width:  965px; height: 50px;" id="address" required>
                                     <label class="input-level" >ADDRESS</label>
                                 </div>  
                             
                             </div>
                             <div class="field" style=" grid-gap: 37%;">
                                 <div class="input-field">
-                                    <input type="tel" placeholder="Contact" style="width: 260%; height: 50px;" id="contact"  pattern="[0-9]{11}" title="please input 11 number" required>
+                                    <input type="tel" placeholder="e.g +92343145678" name="not_robot" style="width: 260%; height: 50px;" id="contact"  pattern="[0-9]{11}" title="please input 11 number" required>
                                     <label  class="input-level">Contact </i></label>
                                 </div>
                                 <div class="input-field">
-                                    <input type="email" placeholder="Email" style="width: 260%; height: 50px;" id="email" required>
+                                    <input type="email" placeholder="e@gmail.com" style="width: 260%; height: 50px;" id="email" required>
                                     <label class="input-level" >Email</label>
                                 </div>  
                             
@@ -107,12 +107,12 @@
                         <span class="title">Education Background</span>
                         <div class="field" style="grid-gap:11% ;margin-top:30px;">
                             <div class="input-field">
-                                <input type="text" placeholder="School name" style="width: 560px; height: 50px;" id="school" required>
+                                <input type="text" placeholder="e.g. USC" style="width: 560px; height: 50px;" id="school" required>
                                 <label >School name</label>
                             </div>
                             <div class="input-field">
-                                <input type="text" placeholder="school location" style="width: 560px; height: 50px;" id="schooll"required >
-                                <label >school location</label>
+                                <input type="text" placeholder="e.g. Talamban Cebu City" style="width: 560px; height: 50px;" id="schooll"required >
+                                <label >school Address</label>
                             </div>  
                         
                         
@@ -238,11 +238,11 @@
                 </div>
                 <div class="field-1">
                     <div class="input-field-1">
-                        <input type="text" placeholder="COMPANY LOCATION" style="width: 1260px; height: 50px;"  required>
+                        <input type="text" placeholder="e.g located at IT park" style="width: 1260px; height: 50px;"  required>
                         <label >COMPANY LOCATION</label>
                     </div>
                     <div class="input-field-1">
-                        <input type="text" placeholder="ADDRESS" style="width: 1260px; height: 50px;"  required>
+                        <input type="text" placeholder="e.g 1234 Main Street" style="width: 1260px; height: 50px;"  required>
                         <label >ADDRESS</label>
                     </div>  
                 
