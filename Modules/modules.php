@@ -21,26 +21,26 @@
             </div>   
         </nav>
     
-                <form action="#">
+                <form action="template.php" method="POST" enctype="multipart/form-data">
             
-                
+                <input type="hidden" name="token" value="HGsZOXpfNC">
                 <div class="form first" style="margin-top: 23px; padding: 30px;">
                     <span >  Personal Information</span>
                     <div class="box" >
                         <div class="picture" >
-                            <label for="addimage"  aria-required="file"><i class="fa fa-plus" style="border: 1px solid; padding:50px; cursor: pointer; font-size: 50px; margin-top: 50px;"></i></label> 
+                            <!-- <label for="addimage"  aria-required="file"><i class="fa fa-plus" style="border: 1px solid; padding:50px; cursor: pointer; font-size: 50px; margin-top: 50px;"></i></label>  -->
                             <!-- <input type="file" name="" id="addimage" style="display: none; visibility:none;" onchange="imagePreview(this)" onchange="getImage(this.value)"> -->
-                            
-                            <input type="file" name="" id="addimage" style="display: none; visibility:none;" onchange="imagePreview(this)" required >
+                            <img src="images/images.png" alt="" width="150" height="200" style="margin-top: 30px;">
+                            <!-- <input type="file" name="" id="addimage" style="display: none; visibility:none;" onchange="imagePreview(this)" required > -->
                             <br>
                             <br>
-                            <label for="addimage" aria-required="file"><i class="fa fa-download" style="border: 1px solid; padding: 10px; background-color: white; " class="download" > Choose A Image</i></label>
-                            <input type="file" name="" id="addimage" style="display: none; visibility:none;" onchange="imagePreview(this)"  required >
+                            <!-- <label for="addimage" aria-required="file"><i class="fa fa-download" style="border: 1px solid; padding: 10px; background-color: white; " class="download" > Choose A Image</i></label> -->
+                            <input  name="profile_image" type="file" required>
                             <br>
                             <img src="" id="out-put" width="300px"  style="position: absolute; margin-top: -240px; margin-left: -125px;"> 
                         
                             
-                        <button class="btnback" style="float: left; margin-top: 170px;">
+                        <button class="btnback" style="float: left; margin-top: 155px;">
                             
                             <i class='fa fa-angle-left' style="font-size: 30px;"></i>
                             <span class="btntext"  style="text-transform: uppercase; font-size: 30px;  "> back
@@ -51,7 +51,7 @@
                         </button>
                         </div>
                         <div class="userInput" >
-                            <div class="field" style=" grid-gap: 37%;">
+                            <div class="field" style=" grid-gap: 34%;">
                                 <div class="input-field" >
                                     <input type="text" placeholder="e.g. John" style="width: 260%; height: 50px;" id="fname" required >
                                   
@@ -75,7 +75,7 @@
                                 </div>  
                             
                             </div>
-                            <div class="field" style=" grid-gap: 37%;">
+                            <div class="field" style=" grid-gap: 34%;">
                                 <div class="input-field">
                                     <input type="tel" placeholder="e.g +92343145678" name="not_robot" style="width: 260%; height: 50px;" id="contact"  pattern="[0-9]{11}" title="please input 11 number" required>
                                     <label  class="input-level">Contact </i></label>
@@ -89,7 +89,7 @@
                             </div>
                         
                             
-                        <button class="btnnext" style="float:right;  margin-top: 95px;" id="nextButton">
+                        <button class="btnnext" style="margin-left:790px;  margin-top: 95px;" id="nextButton">
                             
                             <span class="btntext"  style="text-transform: uppercase; font-size: 30px; background-color: rgb(196, 5, 5); ">next
                                 <i class='fa fa-angle-right'></i>
@@ -301,7 +301,7 @@
                 <span class="btntext"  style="text-transform: uppercase; font-size: 30px;  "> back
                 
                 </span>
-                <button class="nextbtn4" style=" margin-top: 95px;  margin-right: 75px; ">
+                <button class="" style=" margin-top: 95px;  margin-right: 75px; " name="next">
                 
                     <span class="btntext"  style="text-transform: uppercase; font-size: 30px; background-color: rgb(196, 5, 5); ">next
                         <i class='fa fa-angle-right'></i>

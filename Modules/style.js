@@ -1,13 +1,13 @@
 // for displaying the Image
-function imagePreview(image){
-    var images = image.files[0];
-    var reader = new FileReader();
-    reader.onloadend = function(){
-        $('#out-put').attr("src",reader.result).width(150).height(200);
-    }
-   reader.readAsDataURL(images)
+// function imagePreview(image){
+//     var images = image.files[0];
+//     var reader = new FileReader();
+//     reader.onloadend = function(){
+//         $('#out-put').attr("src",reader.result).width(150).height(200);
+//     }
+//    reader.readAsDataURL(images)
    
-}
+// }
 
 $(document).ready(function(){
     // show Educational background
@@ -80,20 +80,22 @@ $(".backbtn3").click(function(){
  
 });
 // for final Review
-// $(".nextbtn4").click(function(){
-    // var startVal = $("#start").val();
- // var endVal = $("#end").val();
- // if(schoolVal.length!=0 && schoollocationVal!=0 && degreeVal!=0 && fieldVal!=0 && startVal!=0 && endVal!=0){ 
+$(".nextbtn4").click(function(){
+//     var startVal = $("#start").val();
+//  var endVal = $("#end").val();
+//  if(schoolVal.length!=0 && schoollocationVal!=0 && degreeVal!=0 && fieldVal!=0 && startVal!=0 && endVal!=0){ 
 // //     $(".second").hide(); 
-// //     $(".first").hide(); 
-// //     $(".third").hide(); 
-// //     $(".fourth").hide(); 
-// //   $(".fifth").hide();
-// });
+//     $(".first").hide(); 
+//     $(".third").hide(); 
+//     $(".fourth").hide(); 
+//   $(".fifth").hide();
+//  }
+$("#myform").attr('action', 'template.php');
+});
 $(".backbtn4").click(function(){
  
  
-  $(".fifth").hide();
+  $(".fifth").hide();   
   $(".fourth").show();
 
 });
