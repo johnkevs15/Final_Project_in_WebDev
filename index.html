@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+  <title>Change Color</title>
+
+</head>
+
+<body>
+  <div class="Frame7">
+    <span class="review">Review Resume</span>
+    <div class="backbox"></div>
+    <div class="pdfback"></div>
+    <span class="download" onclick="confirm()">DOWNLOAD AS PDF</span>
+    <div class="back">
+      <a href="back">BACK</a>
+    </div>
+    <div class="templatesample" id="templatesample">
+      <p style="color: white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam id asperiores, dolores iure temporibus
+        dignissimos explicabo at ipsa distinctio expedita.</p>
+    </div>
+    <span class="resume">RESUME</span>
+    <div class="header">
+      <img src="./DCSM.png">
+      <span>DCSM Resume Builder</span>
+    </div>
+    <div>
+      <span class="home">HOME</span>
+      <span class="about">ABOUT</span>
+      <span class="contact">CONTACT</span>
+      <span class="login">LOGIN/SIGNUP</span>
+    </div>
+    <div class="color1" onclick="changeColor1()"></div>
+    <div class="color2" onclick="changeColor2()"></div>
+    <div class="color3" onclick="changeColor3()"></div>
+    <div class="color4" onclick="changeColor4()"></div>
+    <div class="color5" onclick="changeColor5()"></div>
+    <div class="popup" id="popup">
+      <h2 onclick="exit()">X</h2>
+      <h3>Do you already have an account?</h3>
+      <a href="https://code.tutsplus.com/tutorials/confirm-yes-or-no-with-javascript--cms-37532"><button>Yes</button></a> 
+      <button>No</button>
+    </div>
+  </div>
+</body>
+<script>
+  function changeColor1() {
+    document.getElementById("templatesample").style.background = "black";
+  }
+  function changeColor2() {
+    document.getElementById("templatesample").style.background = "rgba(23, 39, 116, 1)";
+  }
+  function changeColor3() {
+    document.getElementById("templatesample").style.background = "rgba(79, 160, 149, 1)";
+  }
+  function changeColor4() {
+    document.getElementById("templatesample").style.background = "#FF8674";
+  }
+  function changeColor5() {
+    document.getElementById("templatesample").style.background = "#CD6C4B";
+  }
+  function confirm() {
+    document.getElementById("popup").style.display = "block";
+  }
+  function exit() {
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
+
+</html>
