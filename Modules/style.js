@@ -165,8 +165,8 @@ function addSkill(){
       var field = 
       `<div class="mb-3" style="display: grid; padding:10px; with:100%;">
       <label for="exampleInputEmail1" class="form-label">Your Skills</label>
-      <input type="text" class="form-control" name="skill1${skill_count}" style="height: 30px; margin-bottom: 5px;" required>
-      <select class="form-select mt-2" name="skill_level1${skill_count}" style="height: 30px;" required>
+      <input type="text" class="form-control" name="skill${skill_count}" style="height: 30px; margin-bottom: 5px;" required>
+      <select class="form-select mt-2" name="skill_level${skill_count}" style="height: 30px;" required>
           <option value="">Select stars based upon your skill level</option>
           <option value="1">1 - Novice</option>
           <option value="2">2 - Advanced Beginner</option>
