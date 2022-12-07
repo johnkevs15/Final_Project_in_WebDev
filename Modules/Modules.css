@@ -1,0 +1,227 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+} 
+body{
+    /* background-color: aquamarine; */
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    overflow: visible;
+   
+
+}
+
+/* for narbar  */
+
+.header {
+    width: 100%;
+    height: 100px;
+    background: rgba(66, 64, 90, 1);
+    opacity: 1;
+    position: center;
+    top: 0px;
+    left: 45px;
+    margin-top: -25px;
+    padding: 5px;   
+  }
+  .header img{
+    height: 100%;
+    width: 10%;
+    margin-left: 5px;
+    margin-top: 9px;
+    
+  }
+  /* .btnnext{
+    display: none;
+  } */
+  .header span{
+    color: rgb(239, 174, 23);
+    position:absolute;
+    top: 15px;
+    left: 140px;
+    font-family: Inter;
+    font-weight: Semi Bold;
+    font-size: 30px;
+    padding-left: 8px;
+  }
+form{
+    
+
+    /* background-color: red; */
+    /* border: 1px solid; */
+    width: 95%;
+    height: auto;
+    position: absolute;
+    left: 2.5%;
+    margin-top: -2%;
+    position: relative;
+    align-items: center;
+    
+    
+}
+span{
+    font-size:40px;
+    font-weight: 500;
+} 
+.box{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding: 10px;
+    height: 100%;
+    
+}
+.picture{
+    /* background-color: green; */
+    padding: 20px;
+    text-align: center;
+    
+}
+.userInput{
+    /* background-color: #200cff; */
+    padding: 20px;
+   
+}
+img {
+   
+  
+  object-fit: cover;
+
+}
+.field{
+    display: flex;
+    align-items: center;
+   
+    flex-wrap: wrap;
+}
+.field .input-field{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  
+    margin-top: 10px;
+
+}
+form .form{
+    position: absolute;
+}
+.third,  .second, .fourth, .fifth{
+    display: none;  
+ 
+}
+
+.emsg {
+    color: red;
+  }
+  
+  .hidden {
+   display: none;
+  }
+
+.field-1 .input-field-1{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+/* for Professionals Skills */
+.Professional{
+    /* background-color: red; */
+     padding: 10px;
+     display: grid;
+     grid-template-columns: 50% 50%;
+     width: 100%;
+     height: 100%;
+}
+.skills{
+    /* background-color: gray; */
+    font-size: 10px;
+
+
+}
+ul{
+    text-decoration: none;
+}
+.professional{
+    margin-top: 2%;
+    /* background-color: rgba(166, 26, 108, 0.313); */
+    width: 400px;
+    height: 400px;
+   
+}
+
+.btn1{
+    background-color: grey;
+    width: 50px;
+    padding: 10px;
+}
+.btn1:hover{
+    background-color: red;
+}
+/* FOR TEXT EDITOR */
+.Summary{
+    /* background-color: red; */
+    
+     width: 100%;
+     height: 100%;
+}
+a {
+	cursor: pointer;
+}
+.container {
+
+	background: #f3f3f3;
+	border-radius: 8px;
+	/* overflow: hidden; */
+    height: 100%;
+    width: 100%;
+}
+.toolbar {
+	padding: 20px;
+	background: #eee;
+  
+    
+}
+.toolbar .btn-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+    justify-content: center;
+	grid-gap: 10px;
+
+}
+.toolbar .btn-toolbar button {
+	background: #fff;
+	border: 2px solid #ddd;
+	border-radius: 6px;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+}
+.toolbar .btn-toolbar button:hover {
+	background: #f3f3f3;
+}
+#con {
+	padding: 16px;
+	outline: none;
+	height: 70%;
+    border-radius: 10px;
+    /* background-color: #ffff; */
+    width: 95%;
+    /* max-width: 1200px; */
+    margin-left: 30px;
+    /* border: none; */
+    resize: none;
+    position: absolute;
+    
+}
+
+
+
