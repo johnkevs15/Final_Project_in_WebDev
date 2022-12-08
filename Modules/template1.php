@@ -142,7 +142,8 @@ if(Token == $_POST['token'] )
     
     .res_temp1{
         font-family: Arial, Helvetica, sans-serif;
-        margin:10px 10px 10px 10px;
+        margin-left:10%;
+        margin-right:10%;
         border: solid black;
         border-radius: 5px;
         padding:10px;
@@ -171,6 +172,7 @@ if(Token == $_POST['token'] )
         margin-bottom: -20px;
        
     }
+    
     .name, .job, .contact, .address{
         text-transform: uppercase;
     }
@@ -203,103 +205,112 @@ if(Token == $_POST['token'] )
     .fas {
        padding: 15px;
     }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 </style>
 
 <body>
-    <div class="res_temp1">
-        <div class="resume">
-            <hr>
-            <div class="resume_head">
-                
-                <img src="./images/<?php echo $profile;?>" class="imgBx">
-
-                
-                <div class="candidate">
-
-                    <h1 class="name"><?php echo $first_name." " .$last_name;?><b></b></h1>
-                    <h2 class="job"><?php echo $job;?> </h2>
-                    <h4 class="contact"><i class="fas fa-phone-alt"></i> <?php echo $phone;?> </h4>
-                    <h4 class="address"><i class="fas fa-map-marker"></i> <?php echo $address;?> </h4>
-                    <h4 class="email"><i class="fas fa-envelope "></i> <?php echo $gmail;?> </h4>   
-                 
-                </div>
-            </div>
-            <hr>
-            <div class="resume_content1">
-                <h3>PROFESSIONAL SUMMARY</h3>
-                <h4><?php echo $content;?> </h4>
-            </div>
-            <hr>
-            <div class="resume_content2">
-                <h3>WORK HISTORY</h3>
-                <div class="experience">
-                <table>
+    <div class="container">
+        <div class="res_temp1">
+            <div class="resume">
+                <hr>
+                <div class="resume_head">
                     
-                    <tr >
-                        <th class="year"><?php echo $jobstart." - " . $jobend?> </th>
-                        <td class="companyposiotion"><b><?php echo $companyPosition?></b></td>  
-                    </tr> 
-                </table>
-                <table>
-                <tr>          
-                         <td class="companyname"><b><?php echo $companyname?></b></td>
-                        <td class="companyadd"><?php echo $companyaddress?></td>
-                        <td class="companydes"><?php echo $decription?></td>
-                    </tr>
-                </table>
-                </div>
-              
-            </div>
-            <hr>
-            <div class="resume_content3">
-                <h3>PROFESSIONAL SKILLS</h3>
+                    <img src="./images/<?php echo $profile;?>" class="imgBx">
 
-                <table>
-                <?php 
-                    for($j=0; $j<count($skills); $j++){
-                        echo "<div class='skill-1'>
-                                <p><strong>" . strtoupper($skills[$j]) . "</strong></p>
-                                <div class='progress'>";
-                            for($i=0;$i<$skill_levels[$j];$i++){
-                                if($skill_levels[$j]<3){
-                                    echo '<div class="fas fa-star active" style = "color:silver;"></div>';
-                                }else{
-                                    
-                                    echo '<div class="fas fa-star active" style = "color:orange;"></div>';
-                                }
-                            }
-                            echo '</div></div>';
-                        }
-                    ?>
                     
-                </table>
-            </div>
-            
-            <hr>
-            <div class="resume_content4">
-                <h3>EDUCATIONAL BACKGROUND</h3><br>
+                    <div class="candidate">
 
-                <table>
-                            <?php 
-                    for($i=0; $i<count($schoolName);$i++)
-                    {
-                        echo "
-                        <div class='education'>
-                        <div class='msg-1' style =' font-weight: bold;'>" . $schoolStart[$i] . " to " . $schoolEnd[$i]."
+                        <h1 class="name"><?php echo $first_name." " .$last_name;?><b></b></h1>
+                        <h2 class="job"><?php echo $job;?> </h2>
+                        <h4 class="contact"><i class="fas fa-phone-alt"></i> <?php echo $phone;?> </h4>
+                        <h4 class="address"><i class="fas fa-map-marker"></i> <?php echo $address;?> </h4>
+                        <h4 class="email"><i class="fas fa-envelope "></i> <?php echo $gmail;?> </h4>   
+                    
+                    </div>
+                </div>
+                <hr>
+                <div class="resume_content1">
+                    <h3>PROFESSIONAL SUMMARY</h3>
+                    <h4 style="text-align:justify;"><?php echo $content;?> </h4>
+                </div>
+                <hr>
+                <div class="resume_content2">
+                    <h3>WORK HISTORY</h3>
+                    <div class="experience">
+                    <table>
                         
-                        <div style =' font-weight: bold;'>".ucwords($schoolName[$i]) ."</div>
-                        <div style =' font-weight: bold;'>". $schoolLocation[$i] ."</div>
-                        </div>
-                        <div class='msg-2' style =' font-weight: bold;'>" .ucwords($degree[$i]) . "
-                        <div style =' font-weight: bold;'>". $field[$i]."</div>
-                        </div>
-                        </div>
-                        <br>
-                        ";
-                    }
-                    ?>
-                </table>
+                        <tr >
+                            <th class="year"><?php echo $jobstart." - " . $jobend?> </th>
+                            <td class="companyposiotion"><b><?php echo $companyPosition?></b></td>  
+                        </tr> 
+                    </table>
+                    <table>
+                    <tr>          
+                            <td class="companyname"><b><?php echo $companyname?></b></td>
+                            <td class="companyadd"><?php echo $companyaddress?></td>
+                            <td class="companydes"><?php echo $decription?></td>
+                        </tr>
+                    </table>
+                    </div>
+                
+                </div>
+                <hr>
+                <div class="resume_content3">
+                    <h3>PROFESSIONAL SKILLS</h3>
+
+                    <table>
+                    <?php 
+                        for($j=0; $j<count($skills); $j++){
+                            echo "<div class='skill-1'>
+                                    <p><strong>" . strtoupper($skills[$j]) . "</strong></p>
+                                    <div class='progress'>";
+                                for($i=0;$i<$skill_levels[$j];$i++){
+                                    if($skill_levels[$j]<3){
+                                        echo '<div class="fas fa-star active" style = "color:silver;"></div>';
+                                    }else{
+                                        
+                                        echo '<div class="fas fa-star active" style = "color:orange;"></div>';
+                                    }
+                                }
+                                echo '</div></div>';
+                            }
+                        ?>
+                        
+                    </table>
+                </div>
+                
+                <hr>
+                <div class="resume_content4">
+                    <h3>EDUCATIONAL BACKGROUND</h3><br>
+
+                    <table>
+                                <?php 
+                        for($i=0; $i<count($schoolName);$i++)
+                        {
+                            echo "
+                            <div class='education'>
+                            <div class='msg-1' style =' font-weight: bold;'>" . $schoolStart[$i] . " to " . $schoolEnd[$i]."
+                            
+                            <div style =' font-weight: bold;'>".ucwords($schoolName[$i]) ."</div>
+                            <div style =' font-weight: bold;'>". $schoolLocation[$i] ."</div>
+                            </div>
+                            <div class='msg-2' style =' font-weight: bold;'>" .ucwords($degree[$i]) . "
+                            <div style =' font-weight: bold;'>". $field[$i]."</div>
+                            </div>
+                            </div>
+                            <br>
+                            ";
+                        }
+                        ?>
+                    </table>
+                </div>
             </div>
+        </div>
+        <div class="chooser">
+
         </div>
     </div>
 </body>

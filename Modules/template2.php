@@ -152,15 +152,15 @@ if(Token == $_POST['token'] )
 body{
     background: #96805d; 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     min-height: 100vh;
 }
 
 .container{
     position: relative;
     width: 100%;
-    max-width:1000px;
+    max-width:700px;
     min-height:100px;
     background: #fff;
     margin: 50px;
@@ -206,7 +206,7 @@ body{
 
 .name{
     color:#fff;
-    font-size:1.0rem;
+    font-size:2.0rem;
     margin-top:20px;
     text-transform: uppercase;
     text-align: center;
@@ -317,15 +317,20 @@ p{
     color:black;
 }
 .skill-1{
-        display: flex;
+    padding: 5px;
+}
+.progress{
+        /* display: flex; */
         padding:5px;
-        justify-content: space-between;
+        /* justify-content: space-between; */
+        /* text-align:center; */
+        margin-left:30px;
     }
 
 
 </style>
 <body>
-    <div class="container">
+    <div class="container" >
 
         <div class="left_Side">
             <div class="profileText">
