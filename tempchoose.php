@@ -17,11 +17,19 @@
     .temp_menu{
         border: solid #CE7777 5px;
         display:grid;
-        grid-template-columns: 1.5fr 1.5fr 1fr;
+        grid-template-columns: 33.3% 33.3% 33.3%;
         padding:20px;
+         /* width: 100%; */
+         height: 100%;
+       
+         
+       
+        
     }
     .container{
         margin: 2% 2% 2% 2%; 
+        /* width: 100%; */
+        
     }
     .logo{
         width:150px;
@@ -44,7 +52,7 @@
     <div class="container">
 
         <div class="head">
-            <img src="images/DCSM.png" alt="" class="logo">
+            <img src="DCSM.png" alt="" class="logo">
             <span><h1>DCSM Resume Builder</h1></span>
         </div>
 
@@ -57,15 +65,15 @@
             <div class="temp_menu">
 
                 <div class="temp1">
-                    <a href=" "><img src="images/temp1.png" alt="temp1"></a>
+                    <a href=" "><img src="temp1.png" style="width:85%; height:80%; border:1px solid black; margin-top:50px;"></a>
                 </div>
 
                 <div class="temp2">
-                    <a href=" "><img src="images/temp2.png" alt="temp1"></a>
+                    <a href=" "><img src="temp2.png" alt="temp1"  style="width:85%; height:80%; border:1px solid black; margin-top:50px;"></a>
                 </div>
 
                 <div class="temp3">
-                    <a href=" "><img src="images/temp3.png" alt="temp1"></a>
+                    <a href=" "><img src="temp3.png" alt="temp1" style="width:85%; height:80%; border:1px solid black; margin-top:50px;"></a>
                 </div>
 
             </div>
