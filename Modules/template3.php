@@ -134,10 +134,12 @@ if(Token == $_POST['token'] )
     <title><?php echo strtoupper($first_name)." " .strtoupper($last_name);?></title>
 </head>
 <style>
-    /* .res_temp3{
+    .res_temp3{
         margin:10px 10px 10px 10px;
         padding:10px;
-    } */
+        margin-left: 10%;
+        margin-right: 10%;
+    }
     .imgBx{
         width: 200px;
         height: 180px;
@@ -145,20 +147,22 @@ if(Token == $_POST['token'] )
         background-repeat: no-repeat;
         background-position: center;
         object-fit: cover;
-        margin-top: 6px;
+        /* margin-top: 0px; */
+        padding: 10px;
     }
     .resume{
         border-radius:10px;
         border: solid black 0.5px;
-        padding: 15px;
+        padding: 10px;
     }
     .resume_head{
         display:flex;
     }
     .rec{
         height: auto;
-        width: 600px;;
+        width: 100%;
         background-color: rgba(85, 85, 85, 0.309);
+        display: flex;
     }
     .candidate{
         margin-left: 20px;
@@ -202,15 +206,176 @@ if(Token == $_POST['token'] )
 }
 .skill-1{
         display: flex;
-        letter-spacing: 5px;
+        /* letter-spacing: 5px; */
         
     }
 .progress{
     margin-top: 15px;
     margin-left: 10px;
 }
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.color1 {
+    width: 75px;
+    height: 59px;
+    background: rgba(0, 0, 0, 1);
+    opacity: 1;
+    position: absolute;
+    top: 280px;
+    left: 800px;
+    border-radius: 20%;
+    transition-duration: 1000ms;
+    transition-property: all;
+  }
+  .color1:hover{
+    background: black;
+    transform: rotate(180deg);
+  }
+  .color2 {
+    width: 75px;
+    height: 59px;
+    background: rgba(23, 39, 116, 1);
+    opacity: 1;
+    position: absolute;
+    top: 280px;
+    left: 900px;
+    border-radius: 20%;
+    transition-duration: 1000ms;
+    transition-property: all;
+  }
+  .color2:hover{
+    background: rgba(23, 39, 116, 1);
+    transform: rotate(180deg);
+  }
+  .color3 {
+    width: 75px;
+    height: 59px;
+    background: rgba(79, 160, 149, 1);
+    opacity: 1;
+    position: absolute;
+    top: 280px;
+    left: 1000px;
+    border-radius: 20%;
+    transition-duration: 1000ms;
+    transition-property: all;
+  }
+  .color3:hover{
+    background: rgba(79, 160, 149, 1);
+    transform: rotate(180deg);
+  }
+  
+  .color4 {
+    width: 75px;
+    height: 59px;
+    background: #FF8674;
+    opacity: 1;
+    position: absolute;
+    top: 280px;
+    left: 1100px;
+    border-radius: 20%;
+    transition-duration: 1000ms;
+    transition-property: all;
+  }
+  .color4:hover{
+    background: #FF8674;
+    transform: rotate(180deg);
+  }
+  .color5 {
+    width: 75px;
+    height: 59px;
+    background: #CD6C4B;
+    opacity: 1;
+    position: absolute;
+    top: 280px;
+    left: 1200px;
+    border-radius: 20%;
+    transition-duration: 1000ms;
+    transition-property: all;
+  }
+  .color5:hover{
+    background: #CD6C4B;
+    transform: rotate(180deg);
+  }
+  .popup {
+    display: none;
+    border: 1px solid black;
+    height: 200px;
+    width: 300px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    text-align: center;  
+  }
+  .download {
+    width: 245px;
+    color: black;
+    position:absolute;
+    top: 418px;
+    left: 920px;
+    font-family: Inter;
+    font-weight: Bold;
+    font-size: 25px;
+    opacity: 1;
+    cursor: pointer;
+    /* background: red; */
+  }
+  .back {
+    width: 145px;
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 515px;
+    left: 988px;
+    font-family: Arial;
+    font-weight: Bold;
+    font-size: 35px;
+    opacity: 1;
+    text-align: left;
+  }
+   button{
+    margin-top: 5%;
+    padding: 8px 12px;
+  }
+  .backbox {
+    width: 150px;
+    height: 70px;
+    background: rgb(182, 180, 180);
+    opacity: 1;
+    position: absolute;
+    top: 500px;
+    left: 965px;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .pdfback {
+    width: 350px;
+    height: 60px;
+    background: rgb(196, 5, 5);
+    opacity: 1;
+    position: absolute;
+    top: 400px;
+    left: 865px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    overflow: hidden;
+    transition-duration: 1000ms;
+    transition-property: all;
+    cursor: pointer;
+  }
+  .pdfback:hover{
+    background: rgb(165, 164, 163);
+    transform: rotate(180deg);
+  }
 </style>
 <body>
+    <div class="container">
     <div class="res_temp3">
         <div class="resume">
             <div class="resume_head">
@@ -285,7 +450,7 @@ if(Token == $_POST['token'] )
                         <div style =' font-weight: bold;'>".ucwords($schoolName[$i]) ."</div>
                         <div style =' font-weight: bold;'>". $schoolLocation[$i] ."</div>
                         </div>
-                        <div class='msg-2' style =' font-weight: bold;'>" .ucwords($degree[$i]) . "
+                        <div class='msg-2' style =' font-weight: bold; margin-left:50px;'>" .ucwords($degree[$i]) . "
                         <div style =' font-weight: bold;'>". $field[$i]."</div>
                         </div>
                         </div>
@@ -353,5 +518,25 @@ if(Token == $_POST['token'] )
 
         </div>
     </div>
+    <div class="chooser">
+        <div class="color1" onclick="changeColor1()"></div>
+        <div class="color2" onclick="changeColor2()"></div>
+        <div class="color3" onclick="changeColor3()"></div>
+        <div class="color4" onclick="changeColor4()"></div>
+        <div class="color5" onclick="changeColor5()"></div>
+        <div class="backbox"></div>
+      <div class="pdfback"></div>
+      <span class="download" onclick="confirm()">DOWNLOAD AS PDF</span>
+      <div class="back">
+        <a href="back">BACK</a>
+      </div>
+      <div class="popup" id="popup">
+        <h2 onclick="exit()">X</h2>
+        <h3>Do you already have an account?</h3>
+        <a href="https://code.tutsplus.com/tutorials/confirm-yes-or-no-with-javascript--cms-37532"><button>Yes</button></a>
+        <button>No</button>
+      </div>
+    </div>
+ </div>
 </body>
 </html>
