@@ -135,7 +135,7 @@ if(Token == $_POST['token'] )
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $first_name." " .$last_name;?></title>
     <link rel = "icon" href = "images/title_icon.png" type = "image/x-icon">
-    <link rel="stylesheet" href="resume.css">
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -165,15 +165,15 @@ body{
     background: #fff;
     margin: 50px;
     display: grid;
-    grid-template-columns: 1.5fr 1.5fr;
+    grid-template-columns: 45% 55%;
     box-shadow: 0 35px 55px rgba(0,0,0,0.1);
 }
  
-.container .left_Side{
+.left_Side{
     position: relative;
     background: #f5ca7f;
-    padding: 40px;
-    width:100%;
+    padding: 30px;
+    /* width:100%; */
 }
 
 .profileText{
@@ -439,7 +439,7 @@ p{
     left: 988px;
     font-family: Arial;
     font-weight: Bold;
-    font-size: 35px;
+    font-size: 30px;
     opacity: 1;
     text-align: left;
   }
@@ -487,7 +487,7 @@ p{
 <body>
     <div class="container" >
 
-        <div class="left_Side">
+        <div class="left_Side" id="left_Side">
             <div class="profileText">
                 <div class="imgBx">
                     <img src="./images/<?php echo $profile;?>" alt="image">
@@ -609,5 +609,46 @@ p{
                 </div>
          </div>
     </div>
+    <script>
+    function changeColor1() {
+      document.getElementById("left_Side").style.background = "black";
+      document.getElementById("left_Side").style.color = "#fff";
+      
+    }
+
+    function changeColor2() {
+      document.getElementById("left_Side").style.background = "rgba(23, 39, 116, 1)";
+      document.getElementById("left_Side").style.color = "black";
+     
+      // document.getElementById("res_temp1").style.border = "rgba(23, 39, 116, 1)";
+    }
+
+    function changeColor3() {
+      document.getElementById("left_Side").style.background = "rgba(79, 160, 149, 1)";
+      document.getElementById("left_Side").style.color = "black";
+     
+    }
+
+    function changeColor4() {
+      document.getElementById("left_Side").style.background = "#FF8674";
+      document.getElementById("left_Side").style.color = "black";
+     
+    }
+
+    function changeColor5() {
+      document.getElementById("left_Side").style.background = "#CD6C4B";
+      document.getElementById("left_Side").style.color = "black";
+     
+    }
+
+    function confirm() {
+      document.getElementById("popup").style.display = "block";
+    }
+
+    function exit() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+    
 </body>
 </html>

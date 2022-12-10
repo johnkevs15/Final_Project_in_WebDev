@@ -139,8 +139,10 @@ if (Token == $_POST['token']) {
   }
 
   .resume_head {
-    display: flex;
+    /* display: flex; */
     padding: 10px;
+    display: grid;
+    grid-template-columns: 40% 60%;
   }
 
   tr,
@@ -154,6 +156,7 @@ if (Token == $_POST['token']) {
     margin-left: 15px;
     /* display: block; */
     margin-bottom: -20px;
+
 
   }
 
@@ -188,7 +191,7 @@ if (Token == $_POST['token']) {
   .experience,
   .education {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 33% 67%;
 
   }
 
@@ -333,7 +336,7 @@ if (Token == $_POST['token']) {
     left: 988px;
     font-family: Arial;
     font-weight: Bold;
-    font-size: 35px;
+    font-size: 30px;
     opacity: 1;
     text-align: left;
   }
@@ -350,7 +353,7 @@ if (Token == $_POST['token']) {
     opacity: 1;
     position: absolute;
     top: 500px;
-    left: 965px;
+    left: 955px;
     overflow: hidden;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -384,32 +387,32 @@ if (Token == $_POST['token']) {
 
 <body>
   <div class="container">
-    <div class="res_temp1">
+    <div class="res_temp1" id="res_temp1">
       <div class="resume">
         <hr>
         <div class="resume_head">
+        <div class="imgBx">
 
-          <img src="./images/<?php echo $profile; ?>" class="imgBx">
-
-
+        <img src="./images/<?php echo $profile; ?>" class="imgBx">
+        </div>
           <div class="candidate">
 
-            <h1 class="name"><?php echo $first_name . " " . $last_name; ?><b></b></h1>
+            <h1 class="name" id="name"><?php echo $first_name . " " . $last_name; ?><b></b></h1>
             <h2 class="job"><?php echo $job; ?> </h2>
             <h4 class="contact"><i class="fas fa-phone-alt"></i> <?php echo $phone; ?> </h4>
             <h4 class="address"><i class="fas fa-map-marker"></i> <?php echo $address; ?> </h4>
-            <h4 class="email"><i class="fas fa-envelope "></i> <?php echo $gmail; ?> </h4>
-
+            <h4 class="email" ><i class="fas fa-envelope "></i> <?php echo $gmail; ?> </h4>
+          
           </div>
         </div>
         <hr>
         <div class="resume_content1">
-          <h3>PROFESSIONAL SUMMARY</h3>
+          <h3 id="summa">PROFESSIONAL SUMMARY</h3>
           <h4 style="text-align:justify;"><?php echo $content; ?> </h4>
         </div>
         <hr>
         <div class="resume_content2">
-          <h3>WORK HISTORY</h3>
+          <h3 id="work">WORK HISTORY</h3>
           <div class="experience">
             <table>
 
@@ -418,7 +421,7 @@ if (Token == $_POST['token']) {
                 <td class="companyposiotion"><b><?php echo $companyPosition ?></b></td>
               </tr>
             </table>
-            <table style="margin-left: 50px;">
+            <table style="margin-left: 40px;">
               <tr>
                 <td class="companyname"><?php echo $companyname ?></td>
                 <td class="companyadd"><?php echo $companyaddress ?></td>
@@ -430,7 +433,7 @@ if (Token == $_POST['token']) {
         </div>
         <hr>
         <div class="resume_content3">
-          <h3>PROFESSIONAL SKILLS</h3>
+          <h3 id="skl">PROFESSIONAL SKILLS</h3>
 
           <table>
             <?php
@@ -455,7 +458,7 @@ if (Token == $_POST['token']) {
 
         <hr>
         <div class="resume_content4">
-          <h3>EDUCATIONAL BACKGROUND</h3><br>
+          <h3 id="edu">EDUCATIONAL BACKGROUND</h3><br>
 
           <table>
             <?php
@@ -482,12 +485,12 @@ if (Token == $_POST['token']) {
       </div>
     </div>
     <div class="chooser">
-        <div class="color1" onclick="changeColor1()"></div>
-        <div class="color2" onclick="changeColor2()"></div>
-        <div class="color3" onclick="changeColor3()"></div>
-        <div class="color4" onclick="changeColor4()"></div>
-        <div class="color5" onclick="changeColor5()"></div>
-        <div class="backbox"></div>
+      <div class="color1" onclick="changeColor1()"></div>
+      <div class="color2" onclick="changeColor2()"></div>
+      <div class="color3" onclick="changeColor3()"></div>
+      <div class="color4" onclick="changeColor4()"></div>
+      <div class="color5" onclick="changeColor5()"></div>
+      <div class="backbox"></div>
       <div class="pdfback"></div>
       <span class="download" onclick="confirm()">DOWNLOAD AS PDF</span>
       <div class="back">
@@ -500,27 +503,48 @@ if (Token == $_POST['token']) {
         <button>No</button>
       </div>
     </div>
-    
+
   </div>
   <script>
     function changeColor1() {
-      document.getElementById("templatesample").style.background = "black";
+      document.getElementById("name").style.color = "black";
+      document.getElementById("summa").style.color = "black";
+      document.getElementById("work").style.color = "black";
+      document.getElementById( "skl").style.color = "black";
+      document.getElementById( "edu").style.color = "black";
     }
 
     function changeColor2() {
-      document.getElementById("templatesample").style.background = "rgba(23, 39, 116, 1)";
+      document.getElementById("name").style.color = "rgba(23, 39, 116, 1)";
+      document.getElementById("summa").style.color = "rgba(23, 39, 116, 1)";
+      document.getElementById("edu").style.color =  "rgba(23, 39, 116, 1)";
+      document.getElementById("skl").style.color = "rgba(23, 39, 116, 1)";
+      document.getElementById("work").style.color = "rgba(23, 39, 116, 1)";
+      // document.getElementById("res_temp1").style.border = "rgba(23, 39, 116, 1)";
     }
 
     function changeColor3() {
-      document.getElementById("templatesample").style.background = "rgba(79, 160, 149, 1)";
+      document.getElementById("name").style.color = "rgba(79, 160, 149, 1)";
+      document.getElementById("skl").style.color = "rgba(79, 160, 149, 1)";
+      document.getElementById("summa").style.color = "rgba(79, 160, 149, 1)";
+      document.getElementById("edu").style.color = "rgba(79, 160, 149, 1)";
+      document.getElementById("work").style.color = "rgba(79, 160, 149, 1)";
     }
 
     function changeColor4() {
-      document.getElementById("templatesample").style.background = "#FF8674";
+      document.getElementById("name").style.color = "#FF8674";
+      document.getElementById("skl").style.color = "#FF8674";
+      document.getElementById("summa").style.color = "#FF8674";
+      document.getElementById("edu").style.color = "#FF8674";
+      document.getElementById("work").style.color = "#FF8674";
     }
 
     function changeColor5() {
-      document.getElementById("templatesample").style.background = "#CD6C4B";
+      document.getElementById("name").style.color = "#CD6C4B";
+      document.getElementById("skl").style.color = "#CD6C4B";
+      document.getElementById("summa").style.color = "#CD6C4B";
+      document.getElementById("edu").style.color = "#CD6C4B";
+      document.getElementById("work").style.color = "#CD6C4B";
     }
 
     function confirm() {

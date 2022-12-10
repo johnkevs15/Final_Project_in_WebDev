@@ -425,7 +425,7 @@ if(Token == $_POST['token'] )
             <div class="prof_summary">
                 <div class="title">
                     <img src="images/profile icon.png" alt="" class="icon">
-                    <span><h3 style="font-size:2rem; margin-left:10px;">PROFESSIONAL SUMMARY</h3></span>
+                    <span><h3 style="font-size:2rem; margin-left:10px;" id="summa">PROFESSIONAL SUMMARY</h3></span>
                 </div>
                 <div class="prof_content">
                     <h4><?php echo $content;?> </h4>
@@ -435,7 +435,7 @@ if(Token == $_POST['token'] )
             <div class="educ_back">
                 <div class="title">
                     <img src="images/education.png" alt="" class="icon">
-                    <span><h3 style="font-size:2rem; margin-left:10px;">EDUCATIONAL BACKGROUND</h3></span>
+                    <span><h3 style="font-size:30px; margin-left:10px;" id="edu">EDUCATIONAL BACKGROUND</h3></span>
                 </div>
 
                 <!-- start -->
@@ -465,7 +465,7 @@ if(Token == $_POST['token'] )
             <div class="work_history">
                 <div class="title">
                     <img src="images/workhistory.png" alt="" class="icon">
-                    <span><h3 style="font-size:2rem; margin-left:10px;">WORK HISTORY</h3></span>
+                    <span><h3 style="font-size: 30px; margin-left:10px;" id="work">WORK HISTORY</h3></span>
                 </div>
                 <!-- work history start -->
                 <div class="work_content">
@@ -492,7 +492,7 @@ if(Token == $_POST['token'] )
             <div class="professional_skills">
                 <div class="title">
                     <img src="images/workhistory.png" alt="" class="icon">
-                    <span><h3 style="font-size:2rem; margin-left:10px;">PROFESSIONAL SKILLS</h3></span>
+                    <span><h3 style="font-size:2rem; margin-left:10px;" id="skl">PROFESSIONAL SKILLS</h3></span>
                 </div>
                 <!-- start -->
                 <div class="prof_content">
@@ -538,5 +538,55 @@ if(Token == $_POST['token'] )
       </div>
     </div>
  </div>
+ <script>
+    function changeColor1() {
+     
+      document.getElementById("summa").style.color = "black";
+      document.getElementById("work").style.color = "black";
+      document.getElementById( "skl").style.color = "black";
+      document.getElementById( "edu").style.color = "black";
+    }
+
+    function changeColor2() {
+     
+      document.getElementById("summa").style.color = "rgba(23, 39, 116, 1)";
+      document.getElementById("edu").style.color =  "rgba(23, 39, 116, 1)";
+      document.getElementById("skl").style.color = "rgba(23, 39, 116, 1)";
+      document.getElementById("work").style.color = "rgba(23, 39, 116, 1)";
+      // document.getElementById("res_temp1").style.border = "rgba(23, 39, 116, 1)";
+    }
+
+    function changeColor3() {
+     
+      document.getElementById("skl").style.color = "rgba(79, 160, 149, 1)";
+      document.getElementById("summa").style.color = "rgba(79, 160, 149, 1)";
+      document.getElementById("edu").style.color = "rgba(79, 160, 149, 1)";
+      document.getElementById("work").style.color = "rgba(79, 160, 149, 1)";
+    }
+
+    function changeColor4() {
+    
+      document.getElementById("skl").style.color = "#FF8674";
+      document.getElementById("summa").style.color = "#FF8674";
+      document.getElementById("edu").style.color = "#FF8674";
+      document.getElementById("work").style.color = "#FF8674";
+    }
+
+    function changeColor5() {
+      
+      document.getElementById("skl").style.color = "#CD6C4B";
+      document.getElementById("summa").style.color = "#CD6C4B";
+      document.getElementById("edu").style.color = "#CD6C4B";
+      document.getElementById("work").style.color = "#CD6C4B";
+    }
+
+    function confirm() {
+      document.getElementById("popup").style.display = "block";
+    }
+
+    function exit() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
 </body>
 </html>

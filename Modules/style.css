@@ -9,7 +9,7 @@ body{
     height: 100%;
     margin: 0;
     width: 100%;
-    overflow: visible;
+   
    
 
 }
@@ -57,7 +57,7 @@ form{
     position: absolute;
     left: 2.5%;
     margin-top: -2%;
-    position: relative;
+    position: absolute;
     align-items: center;
     
     
