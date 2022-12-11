@@ -115,6 +115,8 @@ if (Token == $_POST['token']) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"></script>
   <title><?php echo $first_name . " " . $last_name; ?></title>
 </head>
 
@@ -156,6 +158,7 @@ if (Token == $_POST['token']) {
     margin-left: 15px;
     /* display: block; */
     margin-bottom: -20px;
+    padding: 10px;
 
 
   }
@@ -386,9 +389,10 @@ if (Token == $_POST['token']) {
 </style>
 
 <body>
-  <div class="container">
+
+  <div class="container" contenteditable="true">
     <div class="res_temp1" id="res_temp1">
-      <div class="resume">
+      <div class="resume" id="pdf">
         <hr>
         <div class="resume_head">
         <div class="imgBx">
@@ -397,7 +401,7 @@ if (Token == $_POST['token']) {
         </div>
           <div class="candidate">
 
-            <h1 class="name" id="name"><?php echo $first_name . " " . $last_name; ?><b></b></h1>
+            <h1 class="name" id="name" name="name"><?php echo $first_name . " " . $last_name; ?><b></b></h1>
             <h2 class="job"><?php echo $job; ?> </h2>
             <h4 class="contact"><i class="fas fa-phone-alt"></i> <?php echo $phone; ?> </h4>
             <h4 class="address"><i class="fas fa-map-marker"></i> <?php echo $address; ?> </h4>
@@ -492,7 +496,7 @@ if (Token == $_POST['token']) {
       <div class="color5" onclick="changeColor5()"></div>
       <div class="backbox"></div>
       <div class="pdfback"></div>
-      <span class="download" onclick="confirm()">DOWNLOAD AS PDF</span>
+      <span class="download" onclick="javascript:demoFromHTML();">DOWNLOAD AS PDF</span>
       <div class="back">
         <a href="back">BACK</a>
       </div>
@@ -505,6 +509,7 @@ if (Token == $_POST['token']) {
     </div>
 
   </div>
+
   <script>
     function changeColor1() {
       document.getElementById("name").style.color = "black";
@@ -554,6 +559,37 @@ if (Token == $_POST['token']) {
     function exit() {
       document.getElementById("popup").style.display = "none";
     }
+    function demoFromHTML() {
+    var pdf = new jsPDF('p', 'pt', 'letter');
+    source = $('#pdf')[0];
+
+    
+    specialElementHandlers = {
+        '#bypassme': function (element, renderer) {
+            return true
+        }
+    };
+
+    console.log("javascript:demoFromHTML();")
+    margins = {
+        top: 80,
+        bottom: 60,
+        left: 40,
+        width: 522
+    };
+
+    pdf.fromHTML(
+    source, 
+    margins.left, 
+    margins.top, { 
+        'width': margins.width, 
+        'elementHandlers': specialElementHandlers
+    },
+
+    function (dispose) {
+        pdf.save('Resume.pdf');
+    }, margins);
+}
   </script>
 </body>
 
