@@ -866,7 +866,6 @@ footer .terms span{
     function hideForm(){
       let form = document.querySelector(".form-wrapper");
       form.style.maxHeight = "";
-      /* Thats all */
     } 
 
     // When the user clicks on <div>, open the popup

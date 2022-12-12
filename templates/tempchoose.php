@@ -12,15 +12,17 @@
 <style>
     body {
         font-family: 'Poppins';
-        font-size: 1.2rem;
     }
     .temp_menu{
-        border: solid #CE7777 5px;
+        border: solid #C7BCA1 5px;
         display:grid;
         grid-template-columns: 33.3% 33.3% 33.3%;
         padding:20px;
          /* width: 100%; */
          height: 100%;
+         text-align:center;
+         margin-bottom:-50px;
+         margin-top:-20px;
        
          
        
@@ -32,8 +34,8 @@
         
     }
     .logo{
-        width:150px;
-        height:100px;
+        width:80px;
+        /* height:100px; */
     }
     .head{
         display:flex;
@@ -42,8 +44,13 @@
         margin-top:-10px;
     }
     .title{
-        background:#CE7777;
+        background:#C7BCA1;
         padding:5px;
+    }
+
+    .title h3{
+        margin-bottom: -8px;
+        margin-top:-2px;
     }
 
 </style>
@@ -53,7 +60,7 @@
 
         <div class="head">
             <img src="DCSM.png" alt="" class="logo">
-            <span><h1>DCSM Resume Builder</h1></span>
+            <span><p style="font-size:24px; color:#222222">DCSM RESUME BUILDER</p></span>
         </div>
 
         <div class="menu">
