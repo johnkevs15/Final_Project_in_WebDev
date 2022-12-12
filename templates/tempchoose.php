@@ -12,6 +12,7 @@
 <style>
     body {
         font-family: 'Poppins';
+        /* background: #FEFCF3; */
     }
     .temp_menu{
         border: solid #C7BCA1 5px;
@@ -21,8 +22,8 @@
          /* width: 100%; */
          height: 100%;
          text-align:center;
-         margin-bottom:-50px;
-         margin-top:-20px;
+         margin-bottom:-10px;
+         margin: top -100px;
        
          
        
@@ -72,15 +73,15 @@
             <div class="temp_menu">
 
                 <div class="temp1">
-                    <a href=" "><img src="temp1.png" style="width:85%; height:80%; border:1px solid black; margin-top:50px;"></a>
+                    <a href="./Modules/modules1.php"><img src="temp1.png" style="width:85%; height:80%; border:1px solid black; margin-top:50px;"></a>
                 </div>
 
                 <div class="temp2">
-                    <a href=" "><img src="temp2.png" alt="temp1"  style="width:85%; height:80%; border:1px solid black; margin-top:50px;"></a>
+                    <a href="./Modules/modules2.php"><img src="temp2.png" alt="temp1"  style="width:85%; height:80%; border:1px solid black; margin-top:50px;"></a>
                 </div>
 
                 <div class="temp3">
-                    <a href=" "><img src="temp3.png" alt="temp1" style="width:85%; height:80%; border:1px solid black; margin-top:50px;"></a>
+                    <a href="./Modules/modules3.php"><img src="temp3.png" alt="temp1" style="width:85%; height:80%; border:1px solid black; margin-top:50px;"></a>
                 </div>
 
             </div>

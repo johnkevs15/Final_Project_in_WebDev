@@ -11,16 +11,39 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
             <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+       
         </head>
+        <style>
+            .header{
+                background:white;
+                padding:10px auto 10px auto;
+                margin-top:5px;
+            }
+            .logo{
+                width:80px;
+                /* margin-left:20px;
+                */
+                /* background-repeat:no-repeat;
+                background-position:center;
+                background-size:cover; */
+
+            }
+            
+            .header span{
+                font-size:24px; 
+                color:#222222;
+                text-transform: uppercase;
+            }
+        </style>
         <body> 
-        <nav>
+        
             <div class="header">
-                <img src="./images/DCSM.png">
+                <img class="logo" src="./images/DCSM.png">
                 <span>DCSM Resume Builder</span>
             </div>   
-        </nav>
+
     
-                <form action="template.php" method="POST" enctype="multipart/form-data">
+                <form action="template1.php" method="POST" enctype="multipart/form-data">
             
                 <input type="hidden" name="token" value="HGsZOXpfNC">
                 <div class="form first" style="margin-top: 23px; padding: 30px;">
@@ -29,7 +52,7 @@
                         <div class="picture" >
                             <!-- <label for="addimage"  aria-required="file"><i class="fa fa-plus" style="border: 1px solid; padding:50px; cursor: pointer; font-size: 50px; margin-top: 50px;"></i></label>  -->
                             <!-- <input type="file" name="" id="addimage" style="display: none; visibility:none;" onchange="imagePreview(this)" onchange="getImage(this.value)"> -->
-                            <img src="images/images.png" alt="" width="150" height="200" style="margin-top: 30px;">
+                            <img src="./images/images.png" alt="" width="150" height="200" style="margin-top: 30px;">
                             <!-- <input type="file" name="" id="addimage" style="display: none; visibility:none;" onchange="imagePreview(this)" required > -->
                             <br>
                             <br>
@@ -50,37 +73,36 @@
                         </button>
                         </div>
                         <div class="userInput" >
-                            <div class="field" style=" grid-gap: 34%;">
+                            <div class="field" style=" grid-gap: 30%;">
                                 <div class="input-field" >
-                                    <input type="text" placeholder="e.g. John" style="width: 260%; height: 50px;" id="fname" required >
+                                    <input type="text" placeholder="e.g. John" style="width: 247%; height: 50px;" id="fname"  name="first_name">
                                   
                                     <label class="input-level" >First Name</label>
                                 </div>
                                 <div class="input-field">
-                                    <input type="text" placeholder="e.g. Doe" style="width: 260%; height: 50px;" id="lname" required>
-                                    <label class="input-level" >SurName</label>
+                                    <input type="text" placeholder="e.g. Doe" style="width: 249%; height: 50px; margin-top: -20px;"  id="lname" name="lname" >
                                 </div>  
                             
                             
                             </div>
                             <div class="field-1">
                                 <div class="input-field-1">
-                                    <input type="text" placeholder="e.g. Sr. Web Developer" style="width: 965px; height: 50px;" id="job" required>
+                                    <input type="text" placeholder="e.g. Sr. Web Developer" style="width: 886px; height: 50px;" id="job" name="job" >
                                     <label class="input-level" >JOB TITLE</label>
                                 </div>
                                 <div class="input-field-1">
-                                    <input type="text" placeholder="e.g. Cebu City" style="width:  965px; height: 50px;" id="address" required>
+                                    <input type="text" placeholder="e.g. Cebu City" style="width:  886px; height: 50px;" id="address" name="address" >
                                     <label class="input-level" >ADDRESS</label>
                                 </div>  
                             
                             </div>
-                            <div class="field" style=" grid-gap: 34%;">
+                            <div class="field" style=" grid-gap: 30%;">
                                 <div class="input-field">
-                                    <input type="tel" placeholder="e.g +92343145678" name="not_robot" style="width: 260%; height: 50px;" id="contact"  pattern="[0-9]{11}" title="please input 11 number" required>
+                                    <input type="tel" placeholder="e.g +92343145678" name="not_robot" style="width: 247%; height: 50px;" id="contact"  pattern="[0-9]{11}" title="please input 11 number" required >
                                     <label  class="input-level">Contact </i></label>
                                 </div>
                                 <div class="input-field">
-                                    <input type="email" placeholder="e@gmail.com" style="width: 260%; height: 50px;" id="email" required>
+                                    <input type="email" placeholder="e@gmail.com" style="width: 249%; height: 50px;" id="email" required name="gmail">
                                     <label class="input-level" >Email</label>
                                 </div>  
                             
@@ -106,37 +128,33 @@
                         <span class="title">Education Background</span>
                         <div class="field" style="grid-gap:11% ;margin-top:30px;">
                             <div class="input-field">
-                                <input type="text" placeholder="e.g. USC" style="width: 560px; height: 50px;" id="school" required>
+                                <input type="text" placeholder="e.g. USC" style="width: 560px; height: 50px;" id="school" required name="schoolName1">
                                 <label >School name</label>
                             </div>
                             <div class="input-field">
-                                <input type="text" placeholder="e.g. Talamban Cebu City" style="width: 560px; height: 50px;" id="schooll"required >
+                                <input type="text" placeholder="e.g. Talamban Cebu City" style="width: 560px; height: 50px;" id="schooll"required name="schoolLocation1">
                                 <label >school Address</label>
                             </div>  
-                        
-                        
                         </div>
                         <div class="field-1">
                             <div class="input-field-1">
-                                <input type="text" placeholder="degree" style="width: 1259px; height: 50px;" id="deg" required>
+                                <input type="text" placeholder="degree" style="width: 1259px; height: 50px;" id="deg" required name="degree1">
                                 <label >degree</label>
                             </div>
                             <div class="input-field-1">
-                                <input type="text" placeholder="field of study" style="width: 1259px; height: 50px;" id="field" required>
+                                <input type="text" placeholder="field of study" style="width: 1259px; height: 50px;" id="field" required name="field1">
                                 <label >field of study</label>
                             </div>      
                         </div>
                         <div class="field"style="grid-gap:11%">
                             <div class="input-field">
-                                <input type="date" placeholder="school start" style="width: 560px; height: 50px;" id="start" required>
+                                <input type="date" placeholder="school start" style="width: 560px; height: 50px;" id="start" required name="schoolStart1">
                                 <label >school start</label>
                             </div>
                             <div class="input-field">
-                                <input type="date" placeholder="school end" style="width: 560px; height: 50px;" id="end" required>
+                                <input type="date" placeholder="school end" style="width: 560px; height: 50px;" id="end" required name="schoolEnd1">
                                 <label >school end</label>
                             </div>  
-                        
-                        
                         </div>
                         <div id="addEducation"></div>
                         <div class="mb-3">
@@ -149,7 +167,7 @@
                             <span class="btntext"  style="text-transform: uppercase; font-size: 30px;  "> back
                             
                             </span>
-                            <button class="nextbtn1" style="margin-left: 1085px; margin-top: -39px; display: flex;">
+                            <button class="nextbtn1" style="margin-left: 1070px; margin-top: -39px; display: flex;">
                             
                                 <span class="btntext"  style="text-transform: uppercase; font-size: 30px; background-color: rgb(196, 5, 5); ">next
                                     <i class='fa fa-angle-right'></i>
@@ -212,7 +230,7 @@
                     <span class="btntext"  style="text-transform: uppercase; font-size: 30px;  "> back
                     
                     </span>
-                    <button class="nextbtn2" style="margin-left: 1085px; margin-top: -39px; display: flex;">
+                    <button class="nextbtn2" style="margin-left: 1070px; margin-top: -39px; display: flex;">
                     
                         <span class="btntext"  style="text-transform: uppercase; font-size: 30px; background-color: rgb(196, 5, 5); ">next
                             <i class='fa fa-angle-right'></i>
@@ -225,11 +243,11 @@
                 <span class="title">Work History</span>
                 <div class="field" style="grid-gap:11% ;margin-top:30px;"   >
                     <div class="input-field">
-                        <input type="text" placeholder="POSITION" style="width: 560px; height: 50px;" id="position" required >
+                        <input type="text" placeholder="POSITION" style="width: 560px; height: 50px;" id="position" required name="companyposition" >
                         <label >POSITION</label>
                     </div>
                     <div class="input-field">
-                        <input type="text" placeholder="  COMPANY NAME" style="width: 560px; height: 50px;"   required> 
+                        <input type="text" placeholder="  COMPANY NAME" style="width: 560px; height: 50px;"   required name="companyname"> 
                         <label >COMPANY NAME</label>
                     </div>  
                 
@@ -237,22 +255,22 @@
                 </div>
                 <div class="field-1">
                     <div class="input-field-1">
-                        <input type="text" placeholder="Description" style="width: 1260px; height: 50px;"  required>
+                        <input type="text" placeholder="Description" style="width: 1260px; height: 50px;"  required name="decription">
                         <label >Job Description</label>
                     </div>
                     <div class="input-field-1">
-                        <input type="text" placeholder="e.g 1234 Main Street" style="width: 1260px; height: 50px;"  required>
+                        <input type="text" placeholder="e.g 1234 Main Street" style="width: 1260px; height: 50px;"  required name="companyaddress">
                         <label >ADDRESS</label>
                     </div>  
                 
                 </div>
                 <div class="field" style="grid-gap:11%; ">
                     <div class="input-field">
-                        <input type="date" placeholder="START DATE" style="width: 560px; height: 50px;" id="st" required>
+                        <input type="date" placeholder="START DATE" style="width: 560px; height: 50px;" id="st" required name="jobstart">
                         <label >START DATE</label>
                     </div>
                     <div class="input-field">
-                        <input type="date" placeholder="END DATE" style="width: 560px; height: 50px;" id="ed" required>
+                        <input type="date" placeholder="END DATE" style="width: 560px; height: 50px;" id="ed" required name="jobend">
                         <label >END DATE</label>
                     </div>  
                 
@@ -265,7 +283,7 @@
                     <span class="btntext"  style="text-transform: uppercase; font-size: 30px;  "> back
                     
                     </span>
-                    <button class="nextbtn3" style="margin-left: 1085px; margin-top: -37px; display: flex;">
+                    <button class="nextbtn3" style="margin-left: 1070px; margin-top: -37px; display: flex;">
                     
                         <span class="btntext"  style="text-transform: uppercase; font-size: 30px; background-color: rgb(196, 5, 5); ">next
                             <i class='fa fa-angle-right'></i>
@@ -284,13 +302,14 @@
                     <div class="btn-toolbar">
                         <button onclick="formatDoc('undo')"><i class='bx bx-undo' ></i></button>
                         <button onclick="formatDoc('redo')"><i class='bx bx-redo' ></i></button>
-                        <button onclick="formatDoc('justifyLeft')"><i class='bx bx-align-left' ></i></button>
+                        <!-- <button onclick="formatDoc('justifyLeft')"><i class='bx bx-align-left' ></i></button>
                         <button onclick="formatDoc('justifyCenter')"><i class='bx bx-align-middle' ></i></button>
-                        <button onclick="formatDoc('justifyRight')"><i class='bx bx-align-right' ></i></button>
+                        <button onclick="formatDoc('justifyRight')"><i class='bx bx-align-right' ></i></button> -->
                     </div>
                 </div>
-                <div id="content" contenteditable="true" spellcheck="true" required>
-                    
+                <textarea name="con" id="con"  cols="168" rows="18" spellcheck="true" required style="margin-left:10px;"></textarea>
+                <!-- <div id="con" contenteditable="true" spellcheck="true" required name ="con">sdsdsdssd -->
+                  
                 </div>
             </div>
             <div class="buttons" style=" margin-top: -35px; justify-content: space-between; display: flex;" >
@@ -300,9 +319,9 @@
                 <span class="btntext"  style="text-transform: uppercase; font-size: 30px;  "> back
                 
                 </span>
-                <button class="" style=" margin-top: 95px;  margin-right: 75px; " name="next">
+                <button class="previewbtn4" style=" margin-top: 95px;  margin-right: 75px; " name="preview">
                 
-                    <span class="btntext"  style="text-transform: uppercase; font-size: 30px; background-color: rgb(196, 5, 5); ">next
+                    <span class="btntext"  style="text-transform: uppercase; font-size: 30px; background-color: rgb(196, 5, 5); ">preview
                         <i class='fa fa-angle-right'></i>
                     </span>
                 </button>
