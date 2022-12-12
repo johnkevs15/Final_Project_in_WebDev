@@ -364,61 +364,6 @@ main{
     width:  100%;
 }
 
-/* pop-up send message */
-
-/* Popup container */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* The actual popup (appears on top) */
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
-
 /* FOOTER ----------------------------------------  */
 footer{
     max-width: 1300px;
@@ -717,9 +662,9 @@ footer .terms span{
 							<div class="description">
 								<div class="title"><b>John Kevin Campanilla</b><br><i>Web Developer</i></div>
 								<div class="text">
-                  <a href="https://twitter.com/"><img class="bx" src="site-images/twitter logo.png" alt=""></a>
-                  <a href="https://www.instagram.com/"><img style = "width:60px;height:45px" class="bx" src="site-images/instagram.png" alt=""></a>
-                  <a href="https://www.facebook.com/"></a><img class="bx" src="site-images/facebook.png" alt="">
+                                    <a href="https://twitter.com"><img class="bx" src="site-images/twitter logo.png" alt=""></a>
+                                    <a href="https://www.instagram.com"><img style = "width:60px;height:45px" class="bx" src="site-images/instagram.png" alt=""></a>
+                                    <a href="https://www.facebook.com"></a><img class="bx" src="site-images/facebook.png" alt="">
 								</div>
 							</div>
 						</div>
@@ -731,9 +676,9 @@ footer .terms span{
 							<div class="description">
 								<div class="title"><b>Clint Anthony Savilla</b><br><i>Web Developer</i></div>
 								<div class="text">
-                  <a href="https://twitter.com/"><img class="bx" src="site-images/twitter logo.png" alt=""></a>
-                  <a href="https://www.instagram.com/"><img style = "width:60px;height:45px" class="bx" src="site-images/instagram.png" alt=""></a>
-                  <a href="https://www.facebook.com/"></a><img class="bx" src="site-images/facebook.png" alt="">
+                                    <a href="https://twitter.com"><img class="bx" src="site-images/twitter logo.png" alt=""></a>
+                                    <a href="https://www.instagram.com"><img style = "width:60px;height:45px" class="bx" src="site-images/instagram.png" alt=""></a>
+                                    <a href="https://www.facebook.com"></a><img class="bx" src="site-images/facebook.png" alt="">
 								</div>
 							</div>
 						</div>
@@ -745,9 +690,9 @@ footer .terms span{
 							<div class="description">
 								<div class="title"><b>Junnalyn Doning</b><br><i>Web Developer</i></div>
 								<div class="text">
-                  <a href="https://twitter.com/"><img class="bx" src="site-images/twitter logo.png" alt=""></a>
-                  <a href="https://www.instagram.com/"><img style = "width:60px;height:45px" class="bx" src="site-images/instagram.png" alt=""></a>
-                  <a href="https://www.facebook.com/"></a><img class="bx" src="site-images/facebook.png" alt="">
+                                    <a href="https://twitter.com"><img class="bx" src="site-images/twitter logo.png" alt=""></a>
+                                    <a href="https://www.instagram.com"><img style = "width:60px;height:45px" class="bx" src="site-images/instagram.png" alt=""></a>
+                                    <a href="https://www.facebook.com"></a><img class="bx" src="site-images/facebook.png" alt="">
 								</div>
 							</div>
 						</div>
@@ -759,9 +704,9 @@ footer .terms span{
 							<div class="description">
 								<div class="title"><b>Christina Mangapuro</b><br><i>Web Developer</i></div>
 								<div class="text">
-                  <a href="https://twitter.com/"><img class="bx" src="site-images/twitter logo.png" alt=""></a>
-                  <a href="https://www.instagram.com/"><img style = "width:60px;height:45px" class="bx" src="site-images/instagram.png" alt=""></a>
-                  <a href="https://www.facebook.com/"></a><img class="bx" src="site-images/facebook.png" alt="">
+                                    <a href="https://twitter.com"><img class="bx" src="site-images/twitter logo.png" alt=""></a>
+                                    <a href="https://www.instagram.com"><img style = "width:60px;height:45px" class="bx" src="site-images/instagram.png" alt=""></a>
+                                    <a href="https://www.facebook.com"></a><img class="bx" src="site-images/facebook.png" alt="">
 								</div>
 							</div>
 						</div>

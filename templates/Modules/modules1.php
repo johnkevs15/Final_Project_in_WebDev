@@ -40,7 +40,6 @@
             
             .title{
                 font-size:24px; 
-                
                 text-transform: uppercase;
             }
         </style>
