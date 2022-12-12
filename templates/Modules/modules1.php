@@ -7,17 +7,26 @@
             <title>Document</title>
             <link rel="stylesheet" href="style.css">
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
             <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+            <title>DCSM Resume Builder</title>
+            <link rel="shortcut icon" href="site-images/DCSM.png">
        
         </head>
         <style>
+            body{
+                margin-top:5px;
+            }
             .header{
                 background:white;
-                padding:10px auto 10px auto;
-                margin-top:5px;
+                display:flex;
+                align-items:center;
+                margin-bottom:-20px;
+                margin-top:-10px;
             }
             .logo{
                 width:80px;
@@ -29,9 +38,9 @@
 
             }
             
-            .header span{
+            .title{
                 font-size:24px; 
-                color:#222222;
+                
                 text-transform: uppercase;
             }
         </style>
@@ -39,7 +48,7 @@
         
             <div class="header">
                 <img class="logo" src="./images/DCSM.png">
-                <span>DCSM Resume Builder</span>
+                <span class="title" style="margin-top:10px; color:#222222; font-family: Poppins; font-size:24px">DCSM Resume Builder</span>
             </div>   
 
     
