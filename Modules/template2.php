@@ -138,7 +138,10 @@ if(Token == $_POST['token'] )
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"></script>
+
+  </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
@@ -482,15 +485,19 @@ p{
     background: rgb(165, 164, 163);
     transform: rotate(180deg);
   }
-
+/* .resume{
+  display: grid;
+ grid-template-columns: 2fr 2fr;
+ width: 100%;
+} */
 </style>
 <body>
-    <div class="container" >
-
+    <div class="container" id="pdf" >
+<!-- <div class="resume" id="pdf" > -->
         <div class="left_Side" id="left_Side">
             <div class="profileText">
                 <div class="imgBx">
-                    <img src="./images/<?php echo $profile;?>" alt="image">
+                    <img src="./images/<?php echo $profile;?>" alt="image" download>
                 </div>
                 <h1 class="name"><br><?php echo $first_name." " .$last_name;?> </h1>
                 <h2 class="job"><?php echo $job;?> </h2>
@@ -510,7 +517,7 @@ p{
             <div class="contactInfo education">
                 <h3 class="title">EDUCATIONAL BACKGROUND</h3>
 
-                <table>
+                <!-- <table> -->
                 <?php 
                     for($i=0; $i<count($schoolName);$i++)
                     {
@@ -530,7 +537,7 @@ p{
                     }
                     ?>
 
-                </table>
+                <!-- </table> -->
 
             </div>
 
@@ -549,7 +556,7 @@ p{
             <div class="about">
                 <h2 class="title2">PROFESSIONAL SKILLS</h2>
                 
-                <table>
+                <!-- <table> -->
                 <?php 
                     for($j=0; $j<count($skills); $j++){
                         echo "<div class='skill-1'>
@@ -567,7 +574,7 @@ p{
                         }
                     ?>
                 
-                </table>
+                <!-- </table> -->
 
             </div>
             <hr>
@@ -577,7 +584,7 @@ p{
                 <div class="experience" >
                 <ul>
                     <div><?php echo $jobstart." - " . $jobend?> </div>
-                    <div><?php echo $companyPosition?></b></div>
+                    <div><?php echo $companyPosition?></div>
                     <div><?php echo $companyname?></div>
                     <div><?php echo $companyaddress?></div>
                     <div><?php echo $decription?></div>
@@ -588,6 +595,7 @@ p{
             </div>
             <hr>
 
+        <!-- </div> -->
         </div>
             <div class="chooser">
                     <div class="color1" onclick="changeColor1()"></div>
@@ -597,7 +605,8 @@ p{
                     <div class="color5" onclick="changeColor5()"></div>
                     <div class="backbox"></div>
                 <div class="pdfback"></div>
-                <span class="download" onclick="confirm()">DOWNLOAD AS PDF</span>
+                <span class="download" onclick="javascript:demoFromHTML();">DOWNLOAD AS PDF</span>
+                <!-- <span class="download" onclick="name();">DOWNLOAD AS PDF</span> -->
                 <div class="back">
                     <a href="back">BACK</a>
                 </div>
@@ -648,6 +657,45 @@ p{
     function exit() {
       document.getElementById("popup").style.display = "none";
     }
+
+      function demoFromHTML() {
+    var pdf = new jsPDF('p', 'pt','letter');
+    source = $('#pdf')[0];
+
+    
+    specialElementHandlers = {
+        '#bypassme': function (element, renderer) {
+            return true
+        }
+    };
+    margins = {
+        top: 10,
+        bottom: 60,
+        left: 40,
+        width: 522,
+        
+    };
+
+    pdf.fromHTML(
+    source, 
+    margins.left, 
+    margins.top, { 
+        'width': margins.width, 
+        'elementHandlers': specialElementHandlers
+    },
+
+    function (dispose) {
+        pdf.save('Resume.pdf');
+    }, margins);
+}
+function name() {
+  var a = document.body.appendChild(
+        document.createElement("a")
+    );
+a.download = "template2.php";
+a.href = "data:text/html," + document.getElementById("pdf").innerHTML;
+}
+
   </script>
     
 </body>

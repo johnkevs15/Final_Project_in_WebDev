@@ -131,19 +131,23 @@ if(Token == $_POST['token'] )
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+   <script   src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf/0.9.3/html2pdf.min.js"></script> -->
     <title><?php echo strtoupper($first_name)." " .strtoupper($last_name);?></title>
 </head>
 <style>
+  
     .res_temp3{
         margin:10px 10px 10px 10px;
         padding:10px;
         margin-left: 10%;
         margin-right: 10%;
+        height: 400PX;
     }
     .imgBx{
         width: 200px;
         height: 180px;
-       
         background-repeat: no-repeat;
         background-position: center;
         object-fit: cover;
@@ -376,7 +380,7 @@ if(Token == $_POST['token'] )
 </style>
 <body>
     <div class="container">
-    <div class="res_temp3">
+    <div class="res_temp3" id="container_content">
         <div class="resume">
             <div class="resume_head">
                 <div class="imgBx">
@@ -526,7 +530,8 @@ if(Token == $_POST['token'] )
         <div class="color5" onclick="changeColor5()"></div>
         <div class="backbox"></div>
       <div class="pdfback"></div>
-      <span class="download" onclick="confirm()">DOWNLOAD AS PDF</span>
+      <!-- <span class="download" onclick="confirm()">DOWNLOAD AS PDF</span> -->
+      <span class="download" id="btn_print" onclick="down()">DOWNLOAD AS PDF</span>
       <div class="back">
         <a href="back">BACK</a>
       </div>
@@ -587,6 +592,22 @@ if(Token == $_POST['token'] )
     function exit() {
       document.getElementById("popup").style.display = "none";
     }
+function down(){
+
+        var element = document.getElementById('container_content');
+        element.style.width='700px';
+        element.style.height='900px';
+        var opt = {
+          margin:       0,
+          filename:     'mypdf.pdf',
+          image:        { type: 'jpeg', quality: 1},
+          html2canvas:  { scale: 2 },
+          jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait', precision:'12' }
+        };
+        html2pdf().set(opt).from(element).save();
+}
+     
+ 
   </script>
 </body>
 </html>
