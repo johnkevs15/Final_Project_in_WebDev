@@ -149,7 +149,7 @@ function addEducation(){
       htmlObject.innerHTML=field;
       addEducation.insertAdjacentElement("beforeend", htmlObject);
     }
-    if(education_count==3)
+    if(education_count==2)
     {
         educationHide.style = "display:none";
     }

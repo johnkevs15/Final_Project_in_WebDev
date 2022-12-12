@@ -116,7 +116,9 @@ if (Token == $_POST['token']) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
   <title><?php echo $first_name . " " . $last_name; ?></title>
 </head>
 
@@ -194,7 +196,7 @@ if (Token == $_POST['token']) {
   .experience,
   .education {
     display: grid;
-    grid-template-columns: 33% 67%;
+    grid-template-columns: 50% 50%;
 
   }
 
@@ -386,27 +388,30 @@ if (Token == $_POST['token']) {
     background: rgb(165, 164, 163);
     transform: rotate(180deg);
   }
+  .resume{
+  padding: 10px;
+  }
 </style>
 
 <body>
 
-  <div class="container" contenteditable="true">
-    <div class="res_temp1" id="res_temp1">
-      <div class="resume" id="pdf">
+  <div class="container">
+    <!-- <page size=A4 class="res_temp1"  contenteditable="true"> -->
+      <div class="resume" id="container_content">
         <hr>
         <div class="resume_head">
-        <div class="imgBx">
+          <div class="imgBx">
 
-        <img src="./images/<?php echo $profile; ?>" class="imgBx">
-        </div>
+            <img src="./images/<?php echo $profile; ?>" class="imgBx">
+          </div>
           <div class="candidate">
 
             <h1 class="name" id="name" name="name"><?php echo $first_name . " " . $last_name; ?><b></b></h1>
             <h2 class="job"><?php echo $job; ?> </h2>
             <h4 class="contact"><i class="fas fa-phone-alt"></i> <?php echo $phone; ?> </h4>
             <h4 class="address"><i class="fas fa-map-marker"></i> <?php echo $address; ?> </h4>
-            <h4 class="email" ><i class="fas fa-envelope "></i> <?php echo $gmail; ?> </h4>
-          
+            <h4 class="email"><i class="fas fa-envelope "></i> <?php echo $gmail; ?> </h4>
+
           </div>
         </div>
         <hr>
@@ -487,7 +492,8 @@ if (Token == $_POST['token']) {
           </table>
         </div>
       </div>
-    </div>
+    <!-- </page> -->
+
     <div class="chooser">
       <div class="color1" onclick="changeColor1()"></div>
       <div class="color2" onclick="changeColor2()"></div>
@@ -496,7 +502,7 @@ if (Token == $_POST['token']) {
       <div class="color5" onclick="changeColor5()"></div>
       <div class="backbox"></div>
       <div class="pdfback"></div>
-      <span class="download" onclick="javascript:demoFromHTML();">DOWNLOAD AS PDF</span>
+      <span class="download" onclick=" down();">DOWNLOAD AS PDF</span>
       <div class="back">
         <a href="back">BACK</a>
       </div>
@@ -515,14 +521,14 @@ if (Token == $_POST['token']) {
       document.getElementById("name").style.color = "black";
       document.getElementById("summa").style.color = "black";
       document.getElementById("work").style.color = "black";
-      document.getElementById( "skl").style.color = "black";
-      document.getElementById( "edu").style.color = "black";
+      document.getElementById("skl").style.color = "black";
+      document.getElementById("edu").style.color = "black";
     }
 
     function changeColor2() {
       document.getElementById("name").style.color = "rgba(23, 39, 116, 1)";
       document.getElementById("summa").style.color = "rgba(23, 39, 116, 1)";
-      document.getElementById("edu").style.color =  "rgba(23, 39, 116, 1)";
+      document.getElementById("edu").style.color = "rgba(23, 39, 116, 1)";
       document.getElementById("skl").style.color = "rgba(23, 39, 116, 1)";
       document.getElementById("work").style.color = "rgba(23, 39, 116, 1)";
       // document.getElementById("res_temp1").style.border = "rgba(23, 39, 116, 1)";
@@ -559,37 +565,31 @@ if (Token == $_POST['token']) {
     function exit() {
       document.getElementById("popup").style.display = "none";
     }
-    function demoFromHTML() {
-    var pdf = new jsPDF('p', 'pt', 'letter');
-    source = $('#pdf')[0];
 
-    
-    specialElementHandlers = {
-        '#bypassme': function (element, renderer) {
-            return true
+    function down() {
+
+      var element = document.getElementById('container_content');
+      // element.style.width='400px';
+      // element.style.height='300px';
+      var opt = {
+        margin: 0,
+        filename: 'Resume.pdf',
+        image: {
+          type: 'jpeg',
+          quality: 1
+        },
+        html2canvas: {
+          scale: 5
+        },
+        // jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait', precision:'12' }
+        jsPDF: {
+          unit: 'in',
+          format: 'letter',
+          orientation: 'portrait'
         }
-    };
-
-    console.log("javascript:demoFromHTML();")
-    margins = {
-        top: 80,
-        bottom: 60,
-        left: 40,
-        width: 522
-    };
-
-    pdf.fromHTML(
-    source, 
-    margins.left, 
-    margins.top, { 
-        'width': margins.width, 
-        'elementHandlers': specialElementHandlers
-    },
-
-    function (dispose) {
-        pdf.save('Resume.pdf');
-    }, margins);
-}
+      };
+      html2pdf().set(opt).from(element).save();
+    }
   </script>
 </body>
 
