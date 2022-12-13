@@ -51,7 +51,7 @@
             </div>   
 
     
-                <form action="template1.php" method="POST" enctype="multipart/form-data">
+                <form action="template3.php" method="POST" enctype="multipart/form-data">
             
                 <input type="hidden" name="token" value="HGsZOXpfNC">
                 <div class="form first" style="margin-top: 23px; padding: 30px;">
