@@ -83,34 +83,35 @@
                         <div class="userInput" >
                             <div class="field" style=" grid-gap: 30%;">
                                 <div class="input-field" >
-                                    <input type="text" placeholder="e.g. John" style="width: 247%; height: 50px;" id="fname"  name="first_name">
+                                    <input type="text" placeholder="e.g. John" style="width: 250%; height: 50px;" id="fname"  name="first_name">
                                   
                                     <label class="input-level" >First Name</label>
                                 </div>
                                 <div class="input-field">
-                                    <input type="text" placeholder="e.g. Doe" style="width: 249%; height: 50px; margin-top: -20px;"  id="lname" name="lname" >
+                                    <input type="text" placeholder="e.g. Doe" style="width: 250%; height: 50px;" id="lname"  name="lname">
+                                    <label class="input-level" >SurName</label>
                                 </div>  
                             
                             
                             </div>
                             <div class="field-1">
                                 <div class="input-field-1">
-                                    <input type="text" placeholder="e.g. Sr. Web Developer" style="width: 886px; height: 50px;" id="job" name="job" >
+                                    <input type="text" placeholder="e.g. Sr. Web Developer" style="width: 890px; height: 50px;" id="job" name="job" >
                                     <label class="input-level" >JOB TITLE</label>
                                 </div>
                                 <div class="input-field-1">
-                                    <input type="text" placeholder="e.g. Cebu City" style="width:  886px; height: 50px;" id="address" name="address" >
+                                    <input type="text" placeholder="e.g. Cebu City" style="width:  890px; height: 50px;" id="address" name="address" >
                                     <label class="input-level" >ADDRESS</label>
                                 </div>  
                             
                             </div>
                             <div class="field" style=" grid-gap: 30%;">
                                 <div class="input-field">
-                                    <input type="tel" placeholder="e.g +92343145678" name="not_robot" style="width: 247%; height: 50px;" id="contact"  pattern="[0-9]{11}" title="please input 11 number" required >
+                                    <input type="tel" placeholder="e.g +92343145678" name="not_robot" style="width: 250%; height: 50px;" id="contact"  pattern="[0-9]{11}" title="please input 11 number" required >
                                     <label  class="input-level">Contact </i></label>
                                 </div>
                                 <div class="input-field">
-                                    <input type="email" placeholder="e@gmail.com" style="width: 249%; height: 50px;" id="email" required name="gmail">
+                                    <input type="email" placeholder="e@gmail.com" style="width: 250%; height: 50px;" id="email" required name="gmail">
                                     <label class="input-level" >Email</label>
                                 </div>  
                             
