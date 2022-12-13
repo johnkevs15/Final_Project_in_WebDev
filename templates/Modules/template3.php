@@ -579,7 +579,7 @@ position: absolute;
     <!-- <span class="download" onclick="confirm()">DOWNLOAD AS PDF</span> -->
     <span class="download" id="btn_print" onclick="down()">DOWNLOAD AS PDF</span>
     <div class="back">
-      <a href="back">BACK</a>
+      <a  href="../tempchoose.php">BACK</a>
     </div>
     <div class="popup" id="popup">
       <h2 onclick="exit()">X</h2>

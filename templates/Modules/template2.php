@@ -608,7 +608,7 @@ if (Token == $_POST['token']) {
       <span class="download" onclick="down()">DOWNLOAD AS PDF</span>
       <!-- <span class="download" onclick="name();">DOWNLOAD AS PDF</span> -->
       <div class="back">
-        <a href="back">BACK</a>
+        <a  href="../tempchoose.php">BACK</a>
       </div>
       <div class="popup" id="popup">
         <h2 onclick="exit()">X</h2>

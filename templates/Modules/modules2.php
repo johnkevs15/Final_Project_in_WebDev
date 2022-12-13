@@ -55,7 +55,7 @@
             
                 <input type="hidden" name="token" value="HGsZOXpfNC">
                 <div class="form first" style="margin-top: 23px; padding: 30px;">
-                    <span >  Personal Information</span>
+                    <span class="title">  Personal Information</span>
                     <div class="box" >
                         <div class="picture" >
                             <!-- <label for="addimage"  aria-required="file"><i class="fa fa-plus" style="border: 1px solid; padding:50px; cursor: pointer; font-size: 50px; margin-top: 50px;"></i></label>  -->

@@ -447,7 +447,7 @@ if (Token == $_POST['token']) {
           <table>
             <?php
             for ($j = 0; $j < count($skills); $j++) {
-              echo "<div class='skill-1'>
+              echo "<div class='skill-1' style =' margin-top: -15px;'>
                                     <p><strong>" . strtoupper($skills[$j]) . "</strong></p>
                                     <div class='progress'>";
               for ($i = 0; $i < $skill_levels[$j]; $i++) {
@@ -474,7 +474,7 @@ if (Token == $_POST['token']) {
             for ($i = 0; $i < count($schoolName); $i++) {
               echo "
                             <div class='education'>
-                            <div class='msg-1' style =' font-weight: bold;'>" . $schoolStart[$i] . " to " . $schoolEnd[$i] . "
+                            <div class='msg-1' style =' font-weight: bold; margin-top: -20px;'>" . $schoolStart[$i] . " to " . $schoolEnd[$i] . "
                             
                             <div style =' font-weight: bold;'>" . ucwords($schoolName[$i]) . "</div>
                             
@@ -504,7 +504,7 @@ if (Token == $_POST['token']) {
       <div class="pdfback"></div>
       <span class="download" onclick=" down();">DOWNLOAD AS PDF</span>
       <div class="back">
-        <a href="back">BACK</a>
+        <a href="../tempchoose.php">BACK</a>
       </div>
       <div class="popup" id="popup">
         <h2 onclick="exit()">X</h2>
